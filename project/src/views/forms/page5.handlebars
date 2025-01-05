@@ -1,0 +1,34 @@
+<h1>Formulario de Voluntarios Kids/Tweens</h1>
+<form action="/form/submit" method="POST">
+    <label for="allergies">Alergias:</label>
+    <input type="text" id="allergies" name="allergies" required>
+
+    <label for="emergencyMeds">Medicamentos de Emergencia:</label>
+    <input type="text" id="emergencyMeds" name="emergencyMeds" required>
+
+    <label for="healthIssues">¿Tiene o ha tenido alguna lesión o enfermedad que limitará su involucración?:</label>
+    <input type="text" id="healthIssues" name="healthIssues" required>
+
+    <label for="continuousTreatment">¿Tiene algún diagnóstico que necesite medicación o tratamiento continuo?:</label>
+    <input type="text" id="continuousTreatment" name="continuousTreatment" required>
+
+    <label for="medicalInsurance">Previsión Médica:</label>
+    <select id="medicalInsurance" name="medicalInsurance">
+        <option value="Fonasa">Fonasa</option>
+        <option value="Isapre">Isapre</option>
+        <option value="Ninguna">Ninguna</option>
+    </select>
+
+    <label for="emergencyContact1">Contacto de Emergencia 1:</label>
+    <input type="text" id="emergencyContact1" name="emergencyContact1" required>
+
+    <label for="relationContact1">Parentesco:</label>
+    <input type="text" id="relationContact1" name="relationContact1" required>
+
+    <label for="phoneContact1">Teléfono:</label>
+    <input type="text" id="phoneContact1" name="phoneContact1" required>
+
+    <button type="submit">Finalizar y Enviar</button>
+    <button type="button" onclick="window.location.href='/form/page4'">Anterior</button>
+</form>
+<p>Hoja 5 de 5</p>

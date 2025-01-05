@@ -1,0 +1,26 @@
+<form action="/form/page2" method="POST">
+    {{#each (range 1 6)}}
+    <div>
+        <h3>Familiar {{this}}</h3>
+        <label>Nombre y Apellido:</label>
+        <input type="text" name="family[{{this}}][name]">
+        <label>Parentesco:</label>
+        <select name="family[{{this}}][relationship]">
+            <option value="">Seleccione</option>
+            <option value="Padre">Padre</option>
+            <option value="Madre">Madre</option>
+        </select>
+        <label>Edad:</label>
+        <input type="number" name="family[{{this}}][age]">
+        <label>Participante Activo:</label>
+        <select name="family[{{this}}][activeParticipant]">
+            <option value="">Seleccione</option>
+            <option value="Si">Sí</option>
+            <option value="No">No</option>
+        </select>
+        <label>Servicio:</label>
+        <input type="text" name="family[{{this}}][service]">
+    </div>
+    {{/each}}
+    <button type="submit">Siguiente</button>
+</form>
