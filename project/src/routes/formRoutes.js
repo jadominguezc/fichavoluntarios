@@ -25,6 +25,7 @@ router.post('/form/page3', formController.handlePage3Data); // Nueva función pa
 router.post('/form/page4', upload.fields([
     { name: 'backgroundCheck', maxCount: 1 },
     { name: 'disqualificationRecord', maxCount: 1 },
+    { name: 'photo', maxCount: 1 },
 ]), formController.handlePage4Data);
 router.post('/form/page5', formController.handlePage5Data); // Nueva función para manejar datos de la página 5
 

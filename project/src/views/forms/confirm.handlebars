@@ -14,11 +14,11 @@
     <div class="form-section">
         <ul>
             {{#each formData.family}}
-                <li>
-                    <p><strong>Nombre:</strong> {{this.name}}</p>
-                    <p><strong>Relación:</strong> {{this.relationship}}</p>
-                    <p><strong>Edad:</strong> {{this.age}}</p>
-                </li>
+            <li>
+                <p><strong>Nombre:</strong> {{this.name}}</p>
+                <p><strong>Relación:</strong> {{this.relationship}}</p>
+                <p><strong>Edad:</strong> {{this.age}}</p>
+            </li>
             {{/each}}
         </ul>
     </div>
@@ -27,6 +27,7 @@
     <div class="form-section">
         <p><strong>Certificado de Antecedentes:</strong> {{formData.documentation.backgroundCheck}}</p>
         <p><strong>Registro de Inhabilidades:</strong> {{formData.documentation.disqualificationRecord}}</p>
+        <p><strong>Fotografía del Voluntario:</strong> {{formData.documentation.photo}}</p>
     </div>
 
     <h2>Antecedentes Médicos</h2>
@@ -42,11 +43,11 @@
     <div class="form-section">
         <ul>
             {{#each formData.medicalHistory.emergencyContacts}}
-                <li>
-                    <p><strong>Nombre:</strong> {{this.name}}</p>
-                    <p><strong>Relación:</strong> {{this.relationship}}</p>
-                    <p><strong>Teléfono:</strong> {{this.phone}}</p>
-                </li>
+            <li>
+                <p><strong>Nombre:</strong> {{this.name}}</p>
+                <p><strong>Relación:</strong> {{this.relationship}}</p>
+                <p><strong>Teléfono:</strong> {{this.phone}}</p>
+            </li>
             {{/each}}
         </ul>
     </div>
