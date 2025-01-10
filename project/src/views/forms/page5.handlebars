@@ -1,32 +1,53 @@
+<div class="progress-bar">
+    <div class="step {{#if (eq currentPage 1)}}active{{/if}}">1</div>
+    <div class="line {{#if (gt currentPage 1)}}filled{{/if}}"></div>
+    <div class="step {{#if (eq currentPage 2)}}active{{/if}}">2</div>
+    <div class="line {{#if (gt currentPage 2)}}filled{{/if}}"></div>
+    <div class="step {{#if (eq currentPage 3)}}active{{/if}}">3</div>
+    <div class="line {{#if (gt currentPage 3)}}filled{{/if}}"></div>
+    <div class="step {{#if (eq currentPage 4)}}active{{/if}}">4</div>
+    <div class="line {{#if (gt currentPage 4)}}filled{{/if}}"></div>
+    <div class="step {{#if (eq currentPage 5)}}active{{/if}}">5</div>
+</div>
+
 <h1>Formulario de Voluntarios Kids/Tweens</h1>
-<form action="/form/submit" method="POST">
+<form action="/form/page5" method="POST">
     <label for="allergies">Alergias:</label>
     <input type="text" id="allergies" name="allergies" required>
 
     <label for="emergencyMeds">Medicamentos de Emergencia:</label>
     <input type="text" id="emergencyMeds" name="emergencyMeds" required>
 
-    <label for="healthIssues">¿Tiene o ha tenido alguna lesión o enfermedad que limitará su involucración?:</label>
+    <label for="healthIssues">¿Tiene o ha tenido alguna lesión o enfermedad que limitará su servicio?:</label>
     <input type="text" id="healthIssues" name="healthIssues" required>
 
     <label for="continuousTreatment">¿Tiene algún diagnóstico que necesite medicación o tratamiento continuo?:</label>
     <input type="text" id="continuousTreatment" name="continuousTreatment" required>
 
     <label for="medicalInsurance">Previsión Médica:</label>
-    <select id="medicalInsurance" name="medicalInsurance">
+    <select id="medicalInsurance" name="medicalInsurance" required>
         <option value="Fonasa">Fonasa</option>
         <option value="Isapre">Isapre</option>
         <option value="Ninguna">Ninguna</option>
     </select>
 
-    <label for="emergencyContact1">Contacto de Emergencia 1:</label>
-    <input type="text" id="emergencyContact1" name="emergencyContact1" required>
+    <h2>Contactos de Emergencia</h2>
 
-    <label for="relationContact1">Parentesco:</label>
-    <input type="text" id="relationContact1" name="relationContact1" required>
+    <label for="emergencyContact1">Nombre del Contacto:</label>
+    <input type="text" id="emergencyContact1" name="emergencyContacts[0][name]" required>
 
-    <label for="phoneContact1">Teléfono:</label>
-    <input type="text" id="phoneContact1" name="phoneContact1" required>
+    <label for="relationContact1">Parentesco del Contacto:</label>
+    <select id="relationContact1" name="emergencyContacts[0][relationship]" required>
+        <option value="">Seleccione</option>
+        <option value="Padre">Padre</option>
+        <option value="Madre">Madre</option>
+        <option value="Esposo(a)">Cónyuge</option>
+        <option value="Hijo(a)">Hijo(a)</option>
+        <option value="Nieto(a)">Nieto(a)</option>
+    </select>
+
+    <label for="phoneContact1">Teléfono del Contacto:</label>
+    <input type="text" id="phoneContact1" name="emergencyContacts[0][phone]" required>
 
     <button type="submit">Finalizar y Enviar</button>
     <button type="button" onclick="window.location.href='/form/page4'">Anterior</button>

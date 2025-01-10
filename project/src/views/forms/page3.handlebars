@@ -1,7 +1,20 @@
+<div class="progress-bar">
+    <div class="step {{#if (eq currentPage 1)}}active{{/if}}">1</div>
+    <div class="line {{#if (gt currentPage 1)}}filled{{/if}}"></div>
+    <div class="step {{#if (eq currentPage 2)}}active{{/if}}">2</div>
+    <div class="line {{#if (gt currentPage 2)}}filled{{/if}}"></div>
+    <div class="step {{#if (eq currentPage 3)}}active{{/if}}">3</div>
+    <div class="line {{#if (gt currentPage 3)}}filled{{/if}}"></div>
+    <div class="step {{#if (eq currentPage 4)}}active{{/if}}">4</div>
+    <div class="line {{#if (gt currentPage 4)}}filled{{/if}}"></div>
+    <div class="step {{#if (eq currentPage 5)}}active{{/if}}">5</div>
+</div>
+
 <h1>Formulario de Voluntarios Kids/Tweens</h1>
-<form action="/form/page4" method="POST">
+<form action="/form/page3" method="POST">
     <label for="educationLevel">Nivel Educativo:</label>
     <select id="educationLevel" name="educationLevel" required>
+        <option value="">Seleccione</option>
         <option value="Colegio">Colegio</option>
         <option value="Universitario">Universitario</option>
         <option value="Postgrado">Postgrado</option>
@@ -15,11 +28,12 @@
 
     <label for="certifications">Certificaciones/Capacitaciones/Licencias:</label>
     <select id="certifications" name="certifications" required>
+        <option value="">Seleccione</option>
         <option value="Si">Sí</option>
         <option value="No">No</option>
     </select>
 
-    <label for="additionalDetails">Indique (si respondió Sí):</label>
+    <label for="additionalDetails">Sí seleccionó SI indicar cuales, sí seleccionó NO escriba NO:</label>
     <input type="text" id="additionalDetails" name="additionalDetails">
 
     <button type="submit">Siguiente</button>

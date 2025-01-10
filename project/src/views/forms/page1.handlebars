@@ -1,5 +1,17 @@
+<div class="progress-bar">
+    <div class="step {{#if (eq currentPage 1)}}active{{/if}}">1</div>
+    <div class="line {{#if (gt currentPage 1)}}filled{{/if}}"></div>
+    <div class="step {{#if (eq currentPage 2)}}active{{/if}}">2</div>
+    <div class="line {{#if (gt currentPage 2)}}filled{{/if}}"></div>
+    <div class="step {{#if (eq currentPage 3)}}active{{/if}}">3</div>
+    <div class="line {{#if (gt currentPage 3)}}filled{{/if}}"></div>
+    <div class="step {{#if (eq currentPage 4)}}active{{/if}}">4</div>
+    <div class="line {{#if (gt currentPage 4)}}filled{{/if}}"></div>
+    <div class="step {{#if (eq currentPage 5)}}active{{/if}}">5</div>
+</div>
+
 <h1>Formulario de Voluntarios Kids/Tweens</h1>
-<form action="/form/page2" method="POST">
+<form action="/form/page1" method="POST">
     <label for="fullName">Nombre Completo:</label>
     <input type="text" id="fullName" name="fullName" required>
     <br>
@@ -16,8 +28,9 @@
     <input type="number" id="age" name="age" required>
     <br>
 
-    <label for="shirtSize">Talla de Polerón:</label>
+    <label for="shirtSize">Talla de Polera/Polerón:</label>
     <select id="shirtSize" name="shirtSize" required>
+        <option value="">Seleccione</option>
         <option value="XS">XS</option>
         <option value="S">S</option>
         <option value="M">M</option>
@@ -33,6 +46,7 @@
 
     <label for="documentType">Tipo de Documento:</label>
     <select id="documentType" name="documentType" required>
+        <option value="">Seleccione</option>
         <option value="CDI">Cédula de Identidad</option>
         <option value="RUT">RUT</option>
         <option value="DNI">DNI</option>
@@ -58,6 +72,7 @@
 
     <label for="maritalStatus">Estado Civil:</label>
     <select id="maritalStatus" name="maritalStatus" required>
+        <option value="">Seleccione</option>
         <option value="Soltero(a)">Soltero(a)</option>
         <option value="Conviviente">Conviviente</option>
         <option value="Casado(a)">Casado(a)</option>
@@ -67,8 +82,9 @@
     </select>
     <br>
 
-    <label for="vehicle">Vehículo propio:</label>
+    <label for="vehicle">¿Cuenta con vehículo propio?:</label>
     <select id="vehicle" name="vehicle" required>
+        <option value="">Seleccione</option>
         <option value="Si">Sí</option>
         <option value="No">No</option>
     </select>
@@ -76,13 +92,15 @@
 
     <label for="gender">Sexo:</label>
     <select id="gender" name="gender" required>
+        <option value="">Seleccione</option>
         <option value="Masculino">Masculino</option>
         <option value="Femenino">Femenino</option>
     </select>
     <br>
 
-    <label for="ministry">Ministerio:</label>
+    <label for="ministry">Ministerio en que sirve:</label>
     <select id="ministry" name="ministry" required>
+        <option value="">Seleccione</option>
         <option value="Kids">Kids</option>
         <option value="Tweens">Tweens</option>
         <option value="Ambos (Sólo líder Ministerios)">Ambos (Sólo Líder Ministerios) </option>

@@ -1,0 +1,60 @@
+<h1>Confirmar Información</h1>
+<div class="form"> <!-- Contenedor principal con clase para estilos -->
+    <h2>Información General</h2>
+    <div class="form-section"> <!-- Sección con clase para separar los bloques -->
+        <p><strong>Nombre Completo:</strong> {{formData.fullName}}</p>
+        <p><strong>Dirección:</strong> {{formData.address}}</p>
+        <p><strong>Fecha de Nacimiento:</strong> {{formData.birthDate}}</p>
+        <p><strong>Edad:</strong> {{formData.age}}</p>
+        <p><strong>Nacionalidad:</strong> {{formData.nationality}}</p>
+        <p><strong>Email:</strong> {{formData.email}}</p>
+    </div>
+
+    <h2>Familiares</h2>
+    <div class="form-section">
+        <ul>
+            {{#each formData.family}}
+                <li>
+                    <p><strong>Nombre:</strong> {{this.name}}</p>
+                    <p><strong>Relación:</strong> {{this.relationship}}</p>
+                    <p><strong>Edad:</strong> {{this.age}}</p>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <h2>Documentación</h2>
+    <div class="form-section">
+        <p><strong>Certificado de Antecedentes:</strong> {{formData.documentation.backgroundCheck}}</p>
+        <p><strong>Registro de Inhabilidades:</strong> {{formData.documentation.disqualificationRecord}}</p>
+    </div>
+
+    <h2>Antecedentes Médicos</h2>
+    <div class="form-section">
+        <p><strong>Alergias:</strong> {{formData.medicalHistory.allergies}}</p>
+        <p><strong>Medicamentos de Emergencia:</strong> {{formData.medicalHistory.emergencyMeds}}</p>
+        <p><strong>Problemas de Salud:</strong> {{formData.medicalHistory.healthIssues}}</p>
+        <p><strong>Tratamiento Continuo:</strong> {{formData.medicalHistory.continuousTreatment}}</p>
+        <p><strong>Previsión Médica:</strong> {{formData.medicalHistory.medicalInsurance}}</p>
+    </div>
+
+    <h2>Contactos de Emergencia</h2>
+    <div class="form-section">
+        <ul>
+            {{#each formData.medicalHistory.emergencyContacts}}
+                <li>
+                    <p><strong>Nombre:</strong> {{this.name}}</p>
+                    <p><strong>Relación:</strong> {{this.relationship}}</p>
+                    <p><strong>Teléfono:</strong> {{this.phone}}</p>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="form-actions"> <!-- Botones centrados -->
+        <form action="/form/submit" method="POST">
+            <button type="submit">Confirmar y Enviar</button>
+            <button type="button" onclick="window.location.href='/form/page5'">Regresar</button>
+        </form>
+    </div>
+</div>

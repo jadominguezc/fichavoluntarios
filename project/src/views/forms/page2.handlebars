@@ -1,26 +1,202 @@
+<div class="progress-bar">
+    <div class="step {{#if (eq currentPage 1)}}active{{/if}}">1</div>
+    <div class="line {{#if (gt currentPage 1)}}filled{{/if}}"></div>
+    <div class="step {{#if (eq currentPage 2)}}active{{/if}}">2</div>
+    <div class="line {{#if (gt currentPage 2)}}filled{{/if}}"></div>
+    <div class="step {{#if (eq currentPage 3)}}active{{/if}}">3</div>
+    <div class="line {{#if (gt currentPage 3)}}filled{{/if}}"></div>
+    <div class="step {{#if (eq currentPage 4)}}active{{/if}}">4</div>
+    <div class="line {{#if (gt currentPage 4)}}filled{{/if}}"></div>
+    <div class="step {{#if (eq currentPage 5)}}active{{/if}}">5</div>
+</div>
+
+<h1>Formulario de Voluntarios Kids/Tweens</h1>
 <form action="/form/page2" method="POST">
-    {{#each (range 1 6)}}
-    <div>
-        <h3>Familiar {{this}}</h3>
-        <label>Nombre y Apellido:</label>
-        <input type="text" name="family[{{this}}][name]">
-        <label>Parentesco:</label>
-        <select name="family[{{this}}][relationship]">
+    <h2>Información de los Familiares</h2>
+
+    <!-- Familiar 1 -->
+    <div class="family-member">
+        <h3>Familiar 1</h3>
+        <label for="family1Name">Nombre y Apellido:</label>
+        <input type="text" id="family1Name" name="family[0][name]">
+
+        <label for="family1Relationship">Parentesco:</label>
+        <select id="family1Relationship" name="family[0][relationship]">
             <option value="">Seleccione</option>
             <option value="Padre">Padre</option>
             <option value="Madre">Madre</option>
+            <option value="Esposo(a)">Cónyuge</option>
+            <option value="Hijo(a)">Hijo(a)</option>
+            <option value="Nieto(a)">Nieto(a)</option>
         </select>
-        <label>Edad:</label>
-        <input type="number" name="family[{{this}}][age]">
-        <label>Participante Activo:</label>
-        <select name="family[{{this}}][activeParticipant]">
+
+        <label for="family1Age">Edad:</label>
+        <input type="number" id="family1Age" name="family[0][age]">
+
+        <label for="family1ActiveParticipant">¿Sirve en algún equipo o ministerio?</label>
+        <select id="family1ActiveParticipant" name="family[0][activeParticipant]">
             <option value="">Seleccione</option>
             <option value="Si">Sí</option>
             <option value="No">No</option>
         </select>
-        <label>Servicio:</label>
-        <input type="text" name="family[{{this}}][service]">
+
+        <label for="family1Service">Equipo/Ministerio:</label>
+        <input type="text" id="family1Service" name="family[0][service]">
     </div>
-    {{/each}}
+
+    <!-- Familiar 2 -->
+    <div class="family-member">
+        <h3>Familiar 2</h3>
+        <label for="family2Name">Nombre y Apellido:</label>
+        <input type="text" id="family2Name" name="family[1][name]">
+
+        <label for="family2Relationship">Parentesco:</label>
+        <select id="family2Relationship" name="family[1][relationship]">
+            <option value="">Seleccione</option>
+            <option value="Padre">Padre</option>
+            <option value="Madre">Madre</option>
+            <option value="Esposo(a)">Cónyuge</option>
+            <option value="Hijo(a)">Hijo(a)</option>
+            <option value="Nieto(a)">Nieto(a)</option>
+        </select>
+
+        <label for="family2Age">Edad:</label>
+        <input type="number" id="family2Age" name="family[1][age]">
+
+        <label for="family2ActiveParticipant">¿Sirve en algún equipo o ministerio?</label>
+        <select id="family2ActiveParticipant" name="family[1][activeParticipant]">
+            <option value="">Seleccione</option>
+            <option value="Si">Sí</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="family2Service">Equipo/Ministerio:</label>
+        <input type="text" id="family2Service" name="family[1][service]">
+    </div>
+
+    <!-- Familiar 3 -->
+    <div class="family-member">
+        <h3>Familiar 3</h3>
+        <label for="family3Name">Nombre y Apellido:</label>
+        <input type="text" id="family3Name" name="family[2][name]">
+
+        <label for="family3Relationship">Parentesco:</label>
+        <select id="family3Relationship" name="family[2][relationship]">
+            <option value="">Seleccione</option>
+            <option value="Padre">Padre</option>
+            <option value="Madre">Madre</option>
+            <option value="Esposo(a)">Cónyuge</option>
+            <option value="Hijo(a)">Hijo(a)</option>
+            <option value="Nieto(a)">Nieto(a)</option>
+        </select>
+
+        <label for="family3Age">Edad:</label>
+        <input type="number" id="family3Age" name="family[2][age]">
+
+        <label for="family3ActiveParticipant">¿Sirve en algún equipo o ministerio?</label>
+        <select id="family3ActiveParticipant" name="family[2][activeParticipant]">
+            <option value="">Seleccione</option>
+            <option value="Si">Sí</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="family3Service">Equipo/Ministerio:</label>
+        <input type="text" id="family3Service" name="family[2][service]">
+    </div>
+
+    <!-- Familiar 4 -->
+    <div class="family-member">
+        <h3>Familiar 4</h3>
+        <label for="family4Name">Nombre y Apellido:</label>
+        <input type="text" id="family4Name" name="family[3][name]">
+
+        <label for="family4Relationship">Parentesco:</label>
+        <select id="family4Relationship" name="family[3][relationship]">
+            <option value="">Seleccione</option>
+            <option value="Padre">Padre</option>
+            <option value="Madre">Madre</option>
+            <option value="Esposo(a)">Cónyuge</option>
+            <option value="Hijo(a)">Hijo(a)</option>
+            <option value="Nieto(a)">Nieto(a)</option>
+        </select>
+
+        <label for="family4Age">Edad:</label>
+        <input type="number" id="family4Age" name="family[3][age]">
+
+        <label for="family4ActiveParticipant">¿Sirve en algún equipo o ministerio?</label>
+        <select id="family4ActiveParticipant" name="family[3][activeParticipant]">
+            <option value="">Seleccione</option>
+            <option value="Si">Sí</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="family4Service">Equipo/Ministerio:</label>
+        <input type="text" id="family4Service" name="family[3][service]">
+    </div>
+
+    <!-- Familiar 5 -->
+    <div class="family-member">
+        <h3>Familiar 5</h3>
+        <label for="family5Name">Nombre y Apellido:</label>
+        <input type="text" id="family5Name" name="family[4][name]">
+
+        <label for="family5Relationship">Parentesco:</label>
+        <select id="family5Relationship" name="family[4][relationship]">
+            <option value="">Seleccione</option>
+            <option value="Padre">Padre</option>
+            <option value="Madre">Madre</option>
+            <option value="Esposo(a)">Cónyuge</option>
+            <option value="Hijo(a)">Hijo(a)</option>
+            <option value="Nieto(a)">Nieto(a)</option>
+        </select>
+
+        <label for="family5Age">Edad:</label>
+        <input type="number" id="family5Age" name="family[4][age]">
+
+        <label for="family5ActiveParticipant">¿Sirve en algún equipo o ministerio?:</label>
+        <select id="family5ActiveParticipant" name="family[4][activeParticipant]">
+            <option value="">Seleccione</option>
+            <option value="Si">Sí</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="family5Service">Equipo/Ministerio:</label>
+        <input type="text" id="family5Service" name="family[4][service]">
+    </div>
+
+    <!-- Familiar 6 -->
+    <div class="family-member">
+        <h3>Familiar 6</h3>
+        <label for="family6Name">Nombre y Apellido:</label>
+        <input type="text" id="family6Name" name="family[5][name]">
+
+        <label for="family6Relationship">Parentesco:</label>
+        <select id="family6Relationship" name="family[5][relationship]">
+            <option value="">Seleccione</option>
+            <option value="Padre">Padre</option>
+            <option value="Madre">Madre</option>
+            <option value="Esposo(a)">Cónyuge</option>
+            <option value="Hijo(a)">Hijo(a)</option>
+            <option value="Nieto(a)">Nieto(a)</option>
+        </select>
+
+        <label for="family6Age">Edad:</label>
+        <input type="number" id="family6Age" name="family[5][age]">
+
+        <label for="family6ActiveParticipant">¿Sirve en algún equipo o ministerio?:</label>
+        <select id="family6ActiveParticipant" name="family[5][activeParticipant]">
+            <option value="">Seleccione</option>
+            <option value="Si">Sí</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="family6Service">Equipo/Ministerio:</label>
+        <input type="text" id="family6Service" name="family[5][service]">
+    </div>
+
+    <!-- Botones -->
     <button type="submit">Siguiente</button>
+    <button type="button" onclick="window.location.href='/form/page1'">Anterior</button>
 </form>
+
+<p>Hoja 2 de 5</p>
