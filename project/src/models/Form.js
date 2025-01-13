@@ -9,7 +9,7 @@ const FormSchema = new mongoose.Schema({
     shirtSize: { type: String, required: true },
     nationality: { type: String, required: true },
     documentType: { type: String, required: true },
-    documentNumber: { type: String, required: true },
+    documentNumber: { type: String, unique: true, required: true },
     phoneNumber: { type: String, required: true },
     occupation: { type: String, required: true },
     email: { type: String, required: true },

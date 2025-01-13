@@ -40,7 +40,10 @@ const hbs = create({
     defaultLayout: 'main', // Archivo de diseño principal
     helpers: {
         eq: (a, b) => a === b, // Helper para comparar valores
-        gt: (a, b) => a > b    // Helper para comparar si un valor es mayor
+        gt: (a, b) => a > b,    // Helper para comparar si un valor es mayor
+        ifEquals: function (arg1, arg2, options) { // Definir ifEquals aquí
+            return (arg1 === arg2) ? options.fn(this) : options.inverse(this);
+        },
     },
 });
 app.engine('handlebars', hbs.engine); // Cambiar método de inicialización
